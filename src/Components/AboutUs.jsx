@@ -1,33 +1,10 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaGitAlt, FaGithub, FaJava } from 'react-icons/fa';
+import Skills from './Skills.js';
 import Tilt from 'react-parallax-tilt';
-import Lottie from 'lottie-react';
+import Lottie from "lottie-react"
 import Coder from '../LottieFiles/coder.json';
-import { SiMongodb, SiJavascript, SiPostman, SiTailwindcss, SiBootstrap, SiFigma, SiVercel, SiSpringboot, SiNpm } from 'react-icons/si';
-import { DiCss3, DiHtml5 } from 'react-icons/di';
 
-const About = () => {
-  // Skill icons mapped with their names
-  const mySkills = [
-    { name: "React", icon: <FaReact /> },
-    { name: "Node", icon: <FaNodeJs /> },
-    { name: "Express", icon: <FaNodeJs /> }, // Using Node.js icon for Express
-    { name: "MongoDB", icon: <SiMongodb /> },
-    { name: "JavaScript", icon: <SiJavascript /> },
-    { name: "HTML", icon: <DiHtml5 /> },
-    { name: "CSS", icon: <DiCss3 /> },
-    { name: "Bootstrap", icon: <SiBootstrap /> },
-    { name: "TailwindCSS", icon: <SiTailwindcss /> },
-    { name: "Git", icon: <FaGitAlt /> },
-    { name: "GitHub", icon: <FaGithub /> },
-    { name: "NPM", icon: <SiNpm /> },
-    { name: "Postman", icon: <SiPostman /> },
-    { name: "Figma", icon: <SiFigma /> },
-    { name: "Vercel", icon: <SiVercel /> },
-    { name: "Java", icon: <FaJava /> },
-    { name: "SpringBoot", icon: <SiSpringboot /> },
-  ];
-
+const AboutUs = () => {
   return (
     <>
       <div className='AboutPage'>
@@ -40,6 +17,8 @@ const About = () => {
           </p>
         </div>
 
+
+
         <div>
           <Tilt>
             <Lottie
@@ -49,19 +28,29 @@ const About = () => {
             />
           </Tilt>
         </div>
+
       </div>
 
       <h1 className='SkillsHeading'>Professional Skillset</h1>
       <div className='skills'>
-        {mySkills.map((skill, index) => (
-          <div key={index} className="skill-icon">
-            {skill.icon}
-            <span>{skill.name}</span>
-          </div>
-        ))}
+
+        <Skills skill='React' />
+        <Skills skill='Node' />
+        <Skills skill='Express' />
+        <Skills skill='MongoDb' />
+        <Skills skill='Git' />
+        <Skills skill='Github' />
+        <Skills skill='Javascript' />
+        <Skills skill='C++' />
+        <Skills skill='Postman' />
+        <Skills skill='Figma' />
+        <Skills skill='Vercel' />
+        <Skills skill='Npm' />
+        <Skills skill='Bootstrap' />
+
       </div>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default AboutUs
